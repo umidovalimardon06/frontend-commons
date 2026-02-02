@@ -1,0 +1,39 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Document</title>
+</head>
+<body>
+
+  <style>
+    body{
+      background-color: black;
+      color: white;
+    }
+  </style>
+
+
+  <h1>Welcome</h1>
+  <input type="text" id="inp">
+  <button onclick="calc()">Process</button>
+
+  <h2 id="result"></h2>
+
+
+  <script>
+    function calc() {
+      const input = document.getElementById("inp")
+
+      try {
+        let output = document.getElementById("result")
+        output.innerText = eval(input.value)
+      } catch (e) {
+        output.innerText = "Invalid, value"
+        input.value = ""
+      }
+    }
+  </script>
+
+</body>
+</html>
